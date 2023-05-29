@@ -9,17 +9,14 @@ import java.util.Optional;
 
 @Service
 public class ValidatorService {
-
     private Map<String, Validator> validatorMap;
 
     public ValidatorService(ValidatorFactory validatorFactory) {
-        validatorMap = validatorFactory.createValidatorMap();
+        validatorMap = validatorFactory.getValidationMap();
     }
 
     public boolean validateFields(String fieldName, String value) {
-        return Optional.ofNullable(validatorMap.get(fieldName))
-                .map(validator -> validator.validate(value))
-                .orElse(false);
+        Validator validator = validatorMap.get(fieldName);
+        return validator != null ? validator.validate(value) : false;
     }
-
 }
