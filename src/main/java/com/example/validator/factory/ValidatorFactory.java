@@ -1,11 +1,6 @@
 package com.example.validator.factory;
 
-import com.example.validator.validators.AddressValidator;
-import com.example.validator.validators.BirthDateValidator;
-import com.example.validator.validators.GenderValidator;
-import com.example.validator.validators.NameValidator;
-import com.example.validator.validators.StateValidator;
-import com.example.validator.validators.Validator;
+import com.example.validator.validators.*;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;

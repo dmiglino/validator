@@ -10,4 +10,5 @@ public final class ValidatorUtils {
   public static final int ADDRESS_MAX_LENGTH = 255;
   public static final int NAME_MAX_LENGTH = 255;
   public static final int STATE_MAX_LENGTH = 255;
+  public static final String REGEX_ALLOWED_PHONE_TYPES = "^(HOME|WORK)";
 }
