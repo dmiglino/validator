@@ -16,6 +16,7 @@ import javax.validation.Valid;
 @Slf4j
 public class AppController {
 
+    //@Valid annotation on input object triggers spring boot to validate the object before executing the call.
     @PostMapping("spring-validate")
     public ResponseEntity<ApiResponse<SuccessfulResponse>> testValidation(@RequestBody @Valid GlobalProfile profile){
         SuccessfulResponse response = SuccessfulResponse.builder()
